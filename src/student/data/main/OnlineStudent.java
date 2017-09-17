@@ -22,7 +22,22 @@ public class OnlineStudent extends Student {
 	}
 
 	@Override
-	public int compareTo(Student student) {
+	public int compareTo(Student stud) {
+		
+		String myID = this.getID();
+		String studID = stud.getID();
+		
+		double doubMyId = Double.parseDouble(myID);
+		double doubStudId = Double.parseDouble(studID);
+		
+		if( doubMyId < doubStudId) {
+			return -1;
+		}
+		
+		if(doubMyId > doubStudId) {
+			return 1;
+		}
+		
 		return 0;
 	}
 	
